@@ -1,7 +1,6 @@
 open LccTypes
 open String
 open Str
-open List
 
 let lex_lambda input = 
   let rec string_to_list input =

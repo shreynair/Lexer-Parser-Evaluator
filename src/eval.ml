@@ -97,7 +97,7 @@ let rec laze env e =
     | Application (a, Application (b,c)) -> Application (a, laze_helper env (Application (b,c)))
     *)
     (* "((Lx.(((Ly.y) a) x)) b)" *)
-  in laze_helper env e
+    in laze_helper env e
   
 
 let rec eager env e = 
@@ -112,8 +112,9 @@ let rec eager env e =
       (match (lookup env a) with
         | None -> Func(a, eager env b)
         | Some _ -> eager env b)
+    | Application (Func (a,b), c) when (isalpha (eager env c) c) -> eager ((a, Some c) :: env) (Func (a,b))
+    | Application (Func (a,b), c) when not(isalpha (eager env c) c) -> Application (Func (a,b), eager env c)
     | Application (a, Application (b,c)) -> Application (a, eager env (Application (b,c)))
-    | Application (Func (a,b), c) -> eager ((a, Some (eager env c)) :: env) (Func (a,b))
     | Application (a,b) -> Application (eager env a, eager env b)
     
     
@@ -124,7 +125,7 @@ let rec convert tree =
     | If (a,b,c) -> "((" ^ (convert a) ^ " " ^ (convert b) ^ ") " ^ (convert c) ^ ")"
     | Not a -> "((Lx.((x (Lx.(Ly.y))) (Lx.(Ly.x)))) " ^ (convert a) ^ ")"
     | And (a,b) -> "(((Lx.(Ly.((x y) (Lx.(Ly.y))))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
-    | Or (a,b) -> "(((Lx.(Ly.((x (Lx.(Ly.x))) y))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
+    | Or (a,b) -> "((((Lx.(Ly.((x (Lx.(Ly.x))) y))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
   
 
 let rec readable tree = 

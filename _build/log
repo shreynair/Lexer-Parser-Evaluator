@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/shreynair/project-6-shreynair
 # Auto-detected concurrency: 4
-$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_611189_output
+$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_9de0d9_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -108,103 +108,38 @@ $ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamldep.opt -modules -impl src/parser.ml) > _build/default/src/.lcc.objs/lcc__Parser.impl.d
-$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.lcc.objs/byte -I src/.lcc.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lcc -o src/.lcc.objs/native/lcc__Parser.cmx -c -impl src/parser.ml)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.lcc.objs/lcc__Eval.impl.d
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.lcc.objs/byte -I src/.lcc.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lcc -o src/.lcc.objs/native/lcc__Eval.cmx -c -impl src/eval.ml)
 $ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -a -o src/lcc.cmxa src/.lcc.objs/native/lcc.cmx src/.lcc.objs/native/lcc__LccTypes.cmx src/.lcc.objs/native/lcc__Parser.cmx src/.lcc.objs/native/lcc__Lexer.cmx src/.lcc.objs/native/lcc__Eval.cmx)
 $ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -o test/public/public.exe /Users/shreynair/.opam/4.13.0/lib/ocaml/str.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml src/lcc.cmxa /Users/shreynair/.opam/4.13.0/lib/ocaml/unix.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/oUnit.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
 $ (cd _build/default/test/public && ./public.exe)
-> ...E.EEEEEE
-> ==============================================================================
-> Error: public:10:public_test_all.
->
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 26, characters 1-1:
-> Error: public:10:public_test_all (in the log).
->
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.cycle in file "test/public/public.ml", line 132, characters 29-66
-> Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
-> Called from Dune__exe__Public.public_test_all in file "test/public/public.ml", line 141, characters 9-63
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("Unimplemented")
-> ------------------------------------------------------------------------------
+> .........EF
 > ==============================================================================
 > Error: public:9:public_readable.
 >
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 34, characters 1-1:
+> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 14, characters 1-1:
 > Error: public:9:public_readable (in the log).
 >
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
+> Raised at Lcc__Eval.readable in file "src/eval.ml", line 124, characters 2-1023
+> Called from Lcc__Eval.readable in file "src/eval.ml", line 127, characters 50-62
 > Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
 > Called from Dune__exe__Public.public_readable in file "test/public/public.ml", line 128, characters 9-112
 > Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
 >
-> Failure("Unimplemented")
+> File "src/eval.ml", line 124, characters 2-7: Pattern matching failed
 > ------------------------------------------------------------------------------
 > ==============================================================================
-> Error: public:8:public_convert.
+> Error: public:10:public_test_all.
 >
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 17, characters 1-1:
-> Error: public:8:public_convert (in the log).
+> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 24, characters 1-1:
+> Error: public:10:public_test_all (in the log).
 >
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
-> Called from Dune__exe__Public.public_convert in file "test/public/public.ml", line 113, characters 9-106
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+> File "test/public/public.ml", line 10, characters 1-1:
+> Error: public:10:public_test_all (in the code).
 >
-> Failure("Unimplemented")
+> public_all: not true
+> not equal
 > ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:7:public_isalpha.
->
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 26, characters 1-1:
-> Error: public:7:public_isalpha (in the log).
->
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.public_isalpha in file "test/public/public.ml", line 98, characters 15-94
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("Unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:6:public_eager.
->
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 8, characters 1-1:
-> Error: public:6:public_eager (in the log).
->
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.eval_test in file "test/public/public.ml", line 16, characters 52-58
-> Called from Dune__exe__Public.public_eager in file "test/public/public.ml", line 94, characters 9-106
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("Unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:5:public_laze.
->
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 17, characters 1-1:
-> Error: public:5:public_laze (in the log).
->
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.eval_test in file "test/public/public.ml", line 16, characters 52-58
-> Called from Dune__exe__Public.public_laze in file "test/public/public.ml", line 86, characters 9-104
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("Unimplemented")
-> ------------------------------------------------------------------------------
-> ==============================================================================
-> Error: public:4:public_reduce.
->
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 8, characters 1-1:
-> Error: public:4:public_reduce (in the log).
->
-> Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-> Called from Dune__exe__Public.eval_test in file "test/public/public.ml", line 16, characters 52-58
-> Called from Dune__exe__Public.public_reduce in file "test/public/public.ml", line 78, characters 9-108
-> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
->
-> Failure("Unimplemented")
-> ------------------------------------------------------------------------------
-> Ran: 11 tests in: 0.11 seconds.
-> FAILED: Cases: 11 Tried: 11 Errors: 7 Failures: 0 Skip:  0 Todo: 0 Timeouts: 0.
+> Ran: 11 tests in: 0.12 seconds.
+> FAILED: Cases: 11 Tried: 11 Errors: 1 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
 [1]

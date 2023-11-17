@@ -58,19 +58,7 @@ let rec parse_engl toks =
     raise (Failure "parsing failed")
   else
     exp
-(*
-and parse_engl_cond toks  =
-  let (t,j) = parse_engl_junc toks in
-  match lookahead t with
-    | Engl_If ->
-      let t' = match_token t (Engl_If) in
-      let (t'', c) = parse_engl_cond t' in
-      let t''' = match_token t'' (Engl_Then) in
-      let (t'''', d) = parse_engl_cond t''' in
-      let t''''' = match_token t'''' (Engl_Else) in
-      let (t'''''', e) = parse_engl_cond t''''' in
-      (t'''''', If(c,d,e))
-    | _ -> t,j *)
+    
 and parse_engl_junc toks  =
   let (t,b) = parse_engl_bool toks in
   match lookahead t with

@@ -1,34 +1,32 @@
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Start test public:1:public_lex_engl.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Test public:1:public_lex_engl is successful.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: End test public:1:public_lex_engl.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Start test public:3:public_parse_engl.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Test public:3:public_parse_engl is successful.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: End test public:3:public_parse_engl.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Start test public:6:public_eager.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Test public:6:public_eager exited with an error.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Failure("Unimplemented") in test public:6:public_eager.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.eval_test in file "test/public/public.ml", line 16, characters 52-58
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.public_eager in file "test/public/public.ml", line 94, characters 9-106
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: 
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: End test public:6:public_eager.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Start test public:8:public_convert.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Test public:8:public_convert exited with an error.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Failure("Unimplemented") in test public:8:public_convert.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.public_convert in file "test/public/public.ml", line 113, characters 9-106
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: 
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: End test public:8:public_convert.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: Start test public:10:public_test_all.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Test public:10:public_test_all exited with an error.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Failure("Unimplemented") in test public:10:public_test_all.
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Raised at Stdlib.failwith in file "stdlib.ml", line 29, characters 17-33
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.cycle in file "test/public/public.ml", line 132, characters 29-66
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.public_test_all in file "test/public/public.ml", line 141, characters 9-63
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 E: 
-2023-11-16T01:51:38+00:00 shreys-MacBook-Air.local#02 I: End test public:10:public_test_all.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:1:public_lex_engl.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Test public:1:public_lex_engl is successful.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:1:public_lex_engl.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:2:public_parse_lambda.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Test public:2:public_parse_lambda is successful.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:2:public_parse_lambda.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:4:public_reduce.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Test public:4:public_reduce is successful.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:4:public_reduce.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:7:public_isalpha.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Test public:7:public_isalpha is successful.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:7:public_isalpha.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:9:public_readable.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Test public:9:public_readable exited with an error.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: File "src/eval.ml", line 124, characters 2-7: Pattern matching failed in test public:9:public_readable.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Raised at Lcc__Eval.readable in file "src/eval.ml", line 124, characters 2-1023
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from Lcc__Eval.readable in file "src/eval.ml", line 127, characters 50-62
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 43-49
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.public_readable in file "test/public/public.ml", line 128, characters 9-112
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: 
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:9:public_readable.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: Start test public:10:public_test_all.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Test public:10:public_test_all has failed.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: public_all: not true
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: not equal in test public:10:public_test_all.
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 30-79
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from Dune__exe__Public.public_test_all in file "test/public/public.ml", line 141, characters 9-63
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 E: 
+2023-11-17T01:05:36+00:00 shreys-MacBook-Air.local#02 I: End test public:10:public_test_all.

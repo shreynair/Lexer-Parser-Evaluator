@@ -78,20 +78,27 @@ let rec reduce env e =
 let rec laze env e = 
   cntr := -1 ;
   let alpha_e = alpha_convert e in
-  match alpha_e with
+  let rec laze_helper env e =
+    match e with
     | Var a -> 
       (match (lookup env a) with
         | None -> Var a
         | Some b -> b)
     | Func (a,b) -> 
       (match (lookup env a) with
-        | None -> Func(a, laze env b)
-        | Some _ -> laze env b)
-    | Application (Func(a,b), c) -> laze ((a, Some c) :: env) (Func(a,b))
-    (*| Application (a, Func(b,c)) -> Application (a, laze env (Func(b,c))) *)
-    | Application (Application (a,b), c) -> Application (laze env (Application (a,b)), c)
-    | Application (a, Application (b,c)) -> Application (a, laze env (Application (b,c)))
-    | Application (a,b) -> Application (laze env a, laze env b)
+        | None -> Func(a, laze_helper env b)
+        | Some _ -> laze_helper env b)
+    | Application (Func(a,b), c) -> laze_helper ((a, Some c) :: env) (Func(a,b))
+    | Application (a,b) when (isalpha (laze_helper env a) a) -> Application (a, laze_helper env b)
+    | Application (a,b) when not (isalpha (laze_helper env a) a) -> Application (laze_helper env a, b)
+    (*
+    | Application (Application(Func(a,b), c), Application(Func(d,e), f)) -> laze_helper env (Application(Func(d,e), f))
+    | Application (Application (a,b), c) -> Application (laze_helper env (Application (a,b)), c)
+    | Application (a, Application (b,c)) -> Application (a, laze_helper env (Application (b,c)))
+    *)
+    (* "((Lx.(((Ly.y) a) x)) b)" *)
+    in laze_helper env e
+  
 
 let rec eager env e = 
   cntr := -1 ;
@@ -124,23 +131,13 @@ let rec readable tree =
   match tree with
   | Func(v0, Func(v1, Var v0')) when v0 = v0' -> "true"
   | Func(v0, Func(v1, Var v1')) when v1 = v1' -> "false"
+  | Application (Application (Func (v0, Func (v1, Application (Application (Var v0', Var v1'), Func (v2, Func (v3, Var v3'))))), a), b) when v0 = v0' && v1 = v1' && v3 = v3' -> 
+    "(" ^ (readable a) ^ " and " ^ (readable b) ^ ")"
+  | Application(Application(Func (v0 ,Func (v1 ,Application (Application (Var v0', Func (v2, Func (v3, Var v2'))),Var v1'))), a), b) when v0 = v0' && v1 = v1' && v2 = v2' -> 
+    "(" ^ (readable a) ^ " or " ^ (readable b) ^ ")"
   | Application(Application(a, b), c) -> "(if " ^ (readable a) ^ " then " ^ (readable b) ^ " else " ^ (readable c) ^ ")"
-  | Application(Func(v0, Application(Application(Var v0', Func(v1, Func(v2, Var v2'))), Func(v3, Func(v4, Var v3')))), a) -> 
-    if (v0 = v0' && v2 = v2' && v3 = v3') then
-      "(not " ^ (readable a) ^ ")"
-    else 
-      ""
-  | Application (Application (Func (v0, Func (v1, Application (Application (Var v0', Var v1'), Func (v2, Func (v3, Var v3'))))), a), b) -> 
-    (*Application(Application(Func ("v0",Func ("v1",Application (Application (Var "v0", Var "v1"),Func ("v2", Func ("v3", Var "v3"))))), Var "a"),Var "b")*)
-    (*Application(Application(Func ("v0",Func ("v1",Application (Application (Var "v0", Var "v1"),Func ("v2", Func ("v3", Var "v3"))))),Func ("v4", Func ("v5", Var "v4"))),Func ("v6", Func ("v7", Var "v7")))*)
-    if (v0 = v0' && v1 = v1' && v3 = v3') then
-      "(" ^ (readable a) ^ " and " ^ (readable b) ^ ")"
-    else 
-      ""
-  | Application(Application(Func (v0 ,Func (v1 ,Application (Application (Var v0', Func (v2, Func (v3, Var v2'))),Var v1'))), a), b) -> 
-    (*Application(Application(Func ("v0",Func ("v1",Application (Application (Var "v0", Func ("v2", Func ("v3", Var "v2"))),Var "v1"))),Var "a"),Var "b")*)
-    if (v0 = v0' && v1 = v1' && v2 = v2') then
-      "(" ^ (readable a) ^ " or " ^ (readable b) ^ ")"
-    else
-      ""
+  | Application(Func(v0, Application(Application(Var v0', Func(v1, Func(v2, Var v2'))), Func(v3, Func(v4, Var v3')))), a) when v0 = v0' && v2 = v2' && v3 = v3' -> 
+    "(not " ^ (readable a) ^ ")"
+  
+  
       

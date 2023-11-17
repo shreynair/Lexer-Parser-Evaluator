@@ -88,7 +88,7 @@ let rec laze env e =
         | None -> Func(a, laze env b)
         | Some _ -> laze env b)
     | Application (Func(a,b), c) -> laze ((a, Some c) :: env) (Func(a,b))
-    | Application (a, Func(b,c)) -> Application (a, laze env (Func(b,c)))
+    (*| Application (a, Func(b,c)) -> Application (a, laze env (Func(b,c))) *)
     | Application (Application (a,b), c) -> Application (laze env (Application (a,b)), c)
     | Application (a, Application (b,c)) -> Application (a, laze env (Application (b,c)))
     | Application (a,b) -> Application (laze env a, laze env b)
@@ -116,7 +116,7 @@ let rec convert tree =
     | Bool false -> "(Lx.(Ly.y))"
     | If (a,b,c) -> "((" ^ (convert a) ^ " " ^ (convert b) ^ ") " ^ (convert c) ^ ")"
     | Not a -> "((Lx.((x (Lx.(Ly.y))) (Lx.(Ly.x)))) " ^ (convert a) ^ ")"
-    | And (a,b) -> "(((Lx.(Ly.((x y) (Lx.(Ly.y))))) " ^ (convert a) ^ " " ^ (convert b) ^ ")"
+    | And (a,b) -> "(((Lx.(Ly.((x y) (Lx.(Ly.y))))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
     | Or (a,b) -> "(((Lx.(Ly.((x (Lx.(Ly.x))) y))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
   
 

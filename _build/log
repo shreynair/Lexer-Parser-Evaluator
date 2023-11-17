@@ -3,7 +3,7 @@
 # Shared cache: disabled
 # Workspace root: /Users/shreynair/project-6-shreynair
 # Auto-detected concurrency: 4
-$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_c1d98f_output
+$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_7cf386_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -108,12 +108,18 @@ $ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -bin-annot -I test/public/.public.eobjs/byte -I /Users/shreynair/.opam/4.13.0/lib/oUnit -I /Users/shreynair/.opam/4.13.0/lib/ounit2 -I /Users/shreynair/.opam/4.13.0/lib/ounit2/advanced -I /Users/shreynair/.opam/4.13.0/lib/seq -I /Users/shreynair/.opam/4.13.0/lib/stdlib-shims -I src/.lcc.objs/byte -no-alias-deps -opaque -o test/public/.public.eobjs/byte/dune__exe__Public.cmi -c -intf test/public/public.mli)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.lcc.objs/lcc__Eval.impl.d
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I test/public/.public.eobjs/byte -I test/public/.public.eobjs/native -I /Users/shreynair/.opam/4.13.0/lib/oUnit -I /Users/shreynair/.opam/4.13.0/lib/ounit2 -I /Users/shreynair/.opam/4.13.0/lib/ounit2/advanced -I /Users/shreynair/.opam/4.13.0/lib/seq -I /Users/shreynair/.opam/4.13.0/lib/stdlib-shims -I src/.lcc.objs/byte -I src/.lcc.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/public/.public.eobjs/native/dune__exe__Public.cmx -c -impl test/public/public.ml)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.lcc.objs/byte -I src/.lcc.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lcc -o src/.lcc.objs/native/lcc__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -a -o src/lcc.cmxa src/.lcc.objs/native/lcc.cmx src/.lcc.objs/native/lcc__LccTypes.cmx src/.lcc.objs/native/lcc__Parser.cmx src/.lcc.objs/native/lcc__Lexer.cmx src/.lcc.objs/native/lcc__Eval.cmx)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -o test/public/public.exe /Users/shreynair/.opam/4.13.0/lib/ocaml/str.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml src/lcc.cmxa /Users/shreynair/.opam/4.13.0/lib/ocaml/unix.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/oUnit.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
 $ (cd _build/default/test/public && ./public.exe)
 > .........EF
 > ==============================================================================
 > Error: public:9:public_readable.
 >
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 17, characters 1-1:
+> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#01.log", line 14, characters 1-1:
 > Error: public:9:public_readable (in the log).
 >
 > Raised at Lcc__Eval.readable in file "src/eval.ml", line 124, characters 2-1023
@@ -127,7 +133,7 @@ $ (cd _build/default/test/public && ./public.exe)
 > ==============================================================================
 > Error: public:10:public_test_all.
 >
-> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 14, characters 1-1:
+> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-shreys-MacBook-Air.local#02.log", line 17, characters 1-1:
 > Error: public:10:public_test_all (in the log).
 >
 > File "test/public/public.ml", line 10, characters 1-1:

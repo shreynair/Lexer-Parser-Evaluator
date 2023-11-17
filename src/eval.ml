@@ -88,7 +88,7 @@ let rec laze env e =
         | None -> Func(a, laze env b)
         | Some _ -> laze env b)
     | Application (Func(a,b), c) -> laze ((a, Some c) :: env) (Func(a,b))
-    | Application (a, Func(b,c)) -> Application (a, laze env (Func(b,c)))
+    (*| Application (a, Func(b,c)) -> Application (a, laze env (Func(b,c))) *)
     | Application (Application (a,b), c) -> Application (laze env (Application (a,b)), c)
     | Application (a, Application (b,c)) -> Application (a, laze env (Application (b,c)))
     | Application (a,b) -> Application (laze env a, laze env b)

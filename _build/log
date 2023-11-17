@@ -1,9 +1,9 @@
-# dune utop
+# dune runtest -f
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /Users/shreynair/project-6-shreynair
 # Auto-detected concurrency: 4
-$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_73e6ad_output
+$ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85d3f327dz3psptz9680000gn/T/dune_d7a859_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -109,6 +109,23 @@ $ /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -config > /var/folders/lt/p8h1c85
 #      }
 #  }
 $ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.lcc.objs/lcc__Eval.impl.d
-$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -bin-annot -I src/.lcc.objs/byte -intf-suffix .ml -no-alias-deps -opaque -open Lcc -o src/.lcc.objs/byte/lcc__Eval.cmo -c -impl src/eval.ml)
-$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -a -o src/lcc.cma src/.lcc.objs/byte/lcc.cmo src/.lcc.objs/byte/lcc__LccTypes.cmo src/.lcc.objs/byte/lcc__Parser.cmo src/.lcc.objs/byte/lcc__Lexer.cmo src/.lcc.objs/byte/lcc__Eval.cmo)
-$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -24 -g -o .utop/utop.exe -output-complete-exe /Users/shreynair/.opam/4.13.0/lib/ocaml/compiler-libs/ocamlcommon.cma /Users/shreynair/.opam/4.13.0/lib/ocaml/compiler-libs/ocamlbytecomp.cma /Users/shreynair/.opam/4.13.0/lib/ocaml/compiler-libs/ocamltoplevel.cma /Users/shreynair/.opam/4.13.0/lib/findlib/findlib.cma /Users/shreynair/.opam/4.13.0/lib/findlib/findlib_top.cma /Users/shreynair/.opam/4.13.0/lib/logs/logs.cma /Users/shreynair/.opam/4.13.0/lib/lwt/lwt.cma /Users/shreynair/.opam/4.13.0/lib/logs/logs_lwt.cma /Users/shreynair/.opam/4.13.0/lib/ocaml/unix.cma -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/ocaml/bigarray.cma -I /Users/shreynair/.opam/4.13.0/lib/ocaml -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/ocplib-endian/ocplib_endian.cma /Users/shreynair/.opam/4.13.0/lib/ocplib-endian/bigstring/ocplib_endian_bigstring.cma /Users/shreynair/.opam/4.13.0/lib/ocaml/threads/threads.cma -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/lwt/unix/lwt_unix.cma -I /Users/shreynair/.opam/4.13.0/lib/lwt/unix /Users/shreynair/.opam/4.13.0/lib/react/react.cma /Users/shreynair/.opam/4.13.0/lib/lwt_react/lwt_react.cma /Users/shreynair/.opam/4.13.0/lib/result/result.cma /Users/shreynair/.opam/4.13.0/lib/uutf/uutf.cma /Users/shreynair/.opam/4.13.0/lib/uucp/uucp.cma /Users/shreynair/.opam/4.13.0/lib/uuseg/uuseg.cma /Users/shreynair/.opam/4.13.0/lib/zed/zed.cma /Users/shreynair/.opam/4.13.0/lib/trie/trie.cma /Users/shreynair/.opam/4.13.0/lib/mew/mew.cma /Users/shreynair/.opam/4.13.0/lib/mew_vi/mew_vi.cma /Users/shreynair/.opam/4.13.0/lib/lambda-term/lambda_term.cma -I /Users/shreynair/.opam/4.13.0/lib/lambda-term /Users/shreynair/.opam/4.13.0/lib/xdg/xdg.cma -I /Users/shreynair/.opam/4.13.0/lib/xdg /Users/shreynair/.opam/4.13.0/lib/utop/uTop.cma /Users/shreynair/.opam/4.13.0/lib/ocaml/str.cma -I /Users/shreynair/.opam/4.13.0/lib/ocaml src/lcc.cma .utop/.utop.eobjs/byte/dune__exe__Utop.cmo -linkall -warn-error -31)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.lcc.objs/byte -I src/.lcc.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Lcc -o src/.lcc.objs/native/lcc__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -a -o src/lcc.cmxa src/.lcc.objs/native/lcc.cmx src/.lcc.objs/native/lcc__LccTypes.cmx src/.lcc.objs/native/lcc__Parser.cmx src/.lcc.objs/native/lcc__Lexer.cmx src/.lcc.objs/native/lcc__Eval.cmx)
+$ (cd _build/default && /Users/shreynair/.opam/4.13.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -o test/public/public.exe /Users/shreynair/.opam/4.13.0/lib/ocaml/str.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml src/lcc.cmxa /Users/shreynair/.opam/4.13.0/lib/ocaml/unix.cmxa -I /Users/shreynair/.opam/4.13.0/lib/ocaml /Users/shreynair/.opam/4.13.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/shreynair/.opam/4.13.0/lib/ounit2/oUnit.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> .........F.
+> ==============================================================================
+> Error: public:10:public_test_all.
+>
+> File "/Users/shreynair/project-6-shreynair/_build/default/test/public/oUnit-public-wireless-10-104-46-192.umd.edu#01.log", line 17, characters 1-1:
+> Error: public:10:public_test_all (in the log).
+>
+> File "test/public/public.ml", line 10, characters 1-1:
+> Error: public:10:public_test_all (in the code).
+>
+> public_all: not true
+> not equal
+> ------------------------------------------------------------------------------
+> Ran: 11 tests in: 0.11 seconds.
+> FAILED: Cases: 11 Tried: 11 Errors: 0 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+[1]

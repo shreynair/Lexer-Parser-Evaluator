@@ -97,7 +97,7 @@ let rec laze env e =
     | Application (a, Application (b,c)) -> Application (a, laze_helper env (Application (b,c)))
     *)
     (* "((Lx.(((Ly.y) a) x)) b)" *)
-    in laze_helper env e
+  in laze_helper env e
   
 
 let rec eager env e = 
@@ -113,7 +113,7 @@ let rec eager env e =
         | None -> Func(a, eager env b)
         | Some _ -> eager env b)
     | Application (a, Application (b,c)) -> Application (a, eager env (Application (b,c)))
-    | Application (Func (a,b), c) -> eager ((a, Some c) :: env) (Func (a,b))
+    | Application (Func (a,b), c) -> eager ((a, Some (eager env c)) :: env) (Func (a,b))
     | Application (a,b) -> Application (eager env a, eager env b)
     
     

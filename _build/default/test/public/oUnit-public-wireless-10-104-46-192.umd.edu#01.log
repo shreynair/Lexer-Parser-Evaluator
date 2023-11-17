@@ -1,25 +1,25 @@
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:0:public_lex_lambda.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:0:public_lex_lambda is successful.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:0:public_lex_lambda.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:2:public_parse_lambda.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:2:public_parse_lambda is successful.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:2:public_parse_lambda.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:4:public_reduce.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:4:public_reduce is successful.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:4:public_reduce.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:6:public_eager.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:6:public_eager is successful.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:6:public_eager.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:8:public_convert.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:8:public_convert is successful.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:8:public_convert.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:10:public_test_all.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: Test public:10:public_test_all has failed.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: public_all: not true
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: not equal in test public:10:public_test_all.
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 30-79
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from Dune__exe__Public.public_test_all in file "test/public/public.ml", line 141, characters 9-63
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 E: 
-2023-11-17T20:14:08+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:10:public_test_all.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:0:public_lex_lambda.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:0:public_lex_lambda is successful.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:0:public_lex_lambda.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:2:public_parse_lambda.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:2:public_parse_lambda is successful.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:2:public_parse_lambda.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:4:public_reduce.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:4:public_reduce is successful.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:4:public_reduce.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:6:public_eager.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:6:public_eager is successful.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:6:public_eager.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:8:public_convert.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Test public:8:public_convert is successful.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:8:public_convert.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: Start test public:10:public_test_all.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: Test public:10:public_test_all has failed.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: public_all: not true
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: not equal in test public:10:public_test_all.
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from Dune__exe__Public.general_test in file "test/public/public.ml", line 10, characters 30-79
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from Dune__exe__Public.public_test_all in file "test/public/public.ml", line 141, characters 9-63
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 E: 
+2023-11-17T22:13:00+00:00 wireless-10-104-46-192.umd.edu#01 I: End test public:10:public_test_all.

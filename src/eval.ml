@@ -126,7 +126,6 @@ let rec convert tree =
     | Not a -> "((Lx.((x (Lx.(Ly.y))) (Lx.(Ly.x)))) " ^ (convert a) ^ ")"
     | Bool true -> "(Lx.(Ly.x))"
     | Bool false -> "(Lx.(Ly.y))"
-    | _ -> ""
   
 
 let rec readable tree = 

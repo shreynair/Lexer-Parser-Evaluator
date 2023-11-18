@@ -120,12 +120,12 @@ let rec eager env e =
     
 let rec convert tree = 
   match tree with
+    | If (a,b,c) -> "((" ^ (convert a) ^ " " ^ (convert b) ^ ") " ^ (convert c) ^ ")"
+    | And (a,b) -> "(((Lx.(Ly.((x y) (Lx.(Ly.y))))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
+    | Or (a,b) -> "(((Lx.(Ly.((x (Lx.(Ly.x))) y))) " ^ (convert a) ^ ") " ^ (convert b) ^ ")"
+    | Not a -> "((Lx.((x (Lx.(Ly.y))) (Lx.(Ly.x)))) " ^ (convert a) ^ ")"
     | Bool true -> "(Lx.(Ly.x))"
     | Bool false -> "(Lx.(Ly.y))"
-    | If (a,b,c) -> "((" ^ convert a ^ " " ^ convert b ^ ") " ^ convert c ^ ")"
-    | Not a -> "((Lx.((x (Lx.(Ly.y))) (Lx.(Ly.x)))) " ^ convert a ^ ")"
-    | And (a,b) -> "(((Lx.(Ly.((x y) (Lx.(Ly.y))))) " ^ convert a ^ ") " ^ convert b ^ ")"
-    | Or (a,b) -> "(((Lx.(Ly.((x (Lx.(Ly.x))) y))) " ^ convert a ^ ") " ^ convert b ^ ")"
   
 
 let rec readable tree = 
